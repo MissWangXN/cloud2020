@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    register-with-eureka: false   #未注册进eureka
+    defaultZone: http://eureka7001cloud.com:7001/eureka,http://eureka7002cloud.com:7002/eureka #集群版
