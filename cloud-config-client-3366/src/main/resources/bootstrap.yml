@@ -1,0 +1,33 @@
+server:
+  port: 3366
+
+#配置客户端通过访问配置服务端拿到github上的某个配置
+spring:
+  application:
+    name: config-client
+  cloud: #config客户端配置
+    config:
+      label: master  #分支名称
+      name: config   #配置文件名称
+      profile: dev #配置文件的后缀名称   上述三项确定配置访问路径：http://config-3344:3344/master/config-dev.yml
+      uri: http://localhost:3344  #
+
+#rabbitmq相关配置 15672是web管理界面的访问端口，5672是MQ的访问端口
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
+
+#服务注册到eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+#暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

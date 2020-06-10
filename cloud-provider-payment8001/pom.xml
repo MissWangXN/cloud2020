@@ -66,5 +66,10 @@
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
+        <!--spring cloud sleuth + zipkin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
     </dependencies>
 </project>

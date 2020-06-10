@@ -8,19 +8,30 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com/MissWangXN/springcloud-config.git #git仓库地址，存放公共配置
-          #          uri: https://github.com/MissWangXN/springcloud-config.git #git仓库地址，存放公共配置
+          uri: https://github.com/MissWangXN/springcloud-config.git #git仓库地址，存放公共配置
           ###搜索目录
-          search-paths:
-            - springcloud-config
-          #            - /**
-          username: 337018466@qq.com
-          passphrase: xinao2015
-        ####读取分支
-      label: master
+          search-paths: springcloud-config
+          ####读取分支
+          default-label: master
+#          username: 337018466@qq.com #账户密码可以不配
+#          password: xinao2015
 
 #服务注册到eureka
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+#rabbitmq相关配置
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
+
+#rebbitmq 消息总线bus 暴露bus刷新配置的端点'bus-refresh'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

@@ -72,4 +72,12 @@ public class OrderController {
         System.out.println(port);
         return port;
     }
+    /**
+     * spring cloud sleuth全链路监控
+     * @return
+     */
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        return "zipkin";
+    }
 }

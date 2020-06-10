@@ -1,4 +1,4 @@
 D:\workSpace\cloud2020\cloud-consumer-feign-hystrix-order-80\src\main\java\com\atguigu\springcloud\config\MyApplicationConfiguration.java
+D:\workSpace\cloud2020\cloud-consumer-feign-hystrix-order-80\src\main\java\com\atguigu\springcloud\OrderHystrixController.java
 D:\workSpace\cloud2020\cloud-consumer-feign-hystrix-order-80\src\main\java\com\atguigu\springcloud\OrderHystrixMain80.java
-D:\workSpace\cloud2020\cloud-consumer-feign-hystrix-order-80\src\main\java\com\atguigu\springcloud\controller\OrderHystrixController.java
 D:\workSpace\cloud2020\cloud-consumer-feign-hystrix-order-80\src\main\java\com\atguigu\springcloud\service\PaymentHystrixService.java

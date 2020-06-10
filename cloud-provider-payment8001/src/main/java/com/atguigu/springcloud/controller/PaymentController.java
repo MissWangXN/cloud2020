@@ -66,10 +66,20 @@ public class PaymentController {
     /**
      * 手写轮询负载均衡算法
      * 1.返回当前服务的接口
+     *
      * @return
      */
     @GetMapping("/payment/lb")
     public String getPaymentLB() {
         return serverPort;
+    }
+
+    /**
+     * spring cloud sleuth全链路监控
+     * @return
+     */
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin() {
+        return "zipkin";
     }
 }

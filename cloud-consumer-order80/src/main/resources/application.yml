@@ -4,13 +4,17 @@ server:
 spring:
   application:
     name: cloud-order-service
-
+  zipkin:
+    base-url: http://localhost:9411
+    sleuth:
+      sampler:  #采样率值结余0-1之间，表示全部采集
+        probability: 1
 eureka:
   client:
     register-with-eureka: true    #将自己注册进eureka Server,默认为true
     fetch-registry: true     #从eureka Server抓取已有的注册信息，默认为true
     service-url:            #入住地址 = eureka Server的地址 = 物业公司
-    #  defaultZone: http://localhost:7001/eureka #单机版
+      #  defaultZone: http://localhost:7001/eureka #单机版
       defaultZone: http://eureka7001cloud.com:7001/eureka,http://eureka7002cloud.com:7002/eureka
 
 # 服务提供者应用名称

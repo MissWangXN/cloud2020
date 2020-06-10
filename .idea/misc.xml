@@ -17,6 +17,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order8083/pom.xml" />
         <option value="$PROJECT_DIR$/cloudconsumerorder80/pom.xml" />
       </set>
     </option>
