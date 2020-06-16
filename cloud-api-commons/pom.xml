@@ -17,6 +17,7 @@
             <artifactId>hutool-all</artifactId>
             <version>5.1.0</version>
         </dependency>
+        <!--多次出现依赖无效，大概是依赖的位置，需要放到最后吧-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

@@ -12,6 +12,14 @@ spring:
       transport: #Sentinel Dashboard地址
         dashboard: localhost:8080
         port: 8719 #默认8719,假设被占用，自动从8719开始+1扫描，直到找到未被占用的端口
+      datasource:  #注意缩进关系，否则sentinel读不到nacos配置规则
+        ds1:   #数据源1
+          nacos:
+            server-addr: localhost:8848
+            dataId: ${spring.application.name}
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow  #流控规则
 
 management:
   endpoints:

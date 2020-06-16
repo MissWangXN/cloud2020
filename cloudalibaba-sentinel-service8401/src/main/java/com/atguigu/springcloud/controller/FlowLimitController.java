@@ -2,11 +2,12 @@ package com.atguigu.springcloud.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.atguigu.springcloud.entities.CommonResult;
+import com.atguigu.springcloud.entities.Payment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.swing.text.html.HTMLDocument;
 import java.util.concurrent.TimeUnit;
 
 @RestController
@@ -47,7 +48,12 @@ public class FlowLimitController {
     }
 
     public String deal_testHotKey(String p1, String p2, BlockException ex) {
-
         return "---deal_testHotKey";
+    }
+
+    @GetMapping("/rateLimit/byUrl")
+    @SentinelResource(value = "byUrl")
+    public CommonResult byUrl(){
+        return new CommonResult(200,"按url限流测试ok",new Payment(2020L,"serial2020"));
     }
 }
